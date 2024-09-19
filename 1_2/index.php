@@ -11,54 +11,52 @@
     <?php
         echo "Hello world";
         echo "<br>";
+
         print "Hello World";    
         echo "<br>";
-
+       
+        echo print "Hello World"; # Hello World1
+        echo "<br><br>";
         #  Hello World1 це тому, що print вертає 1 
         # і може бути використаний як вираз
-        echo print "Hello World"; # Hello World1
-        echo "<br><br>"; 
 
-        print ("Hello World");
+        print ("Hello World"); //Hello World
         echo "<br>";
-        echo("Hello World");
-
+        echo("Hello World");//Hello World
         echo "<br>";
-        echo "Hello"," ", "World";
+        echo "Hello"," ", "World";//Hello World
         
-        # Виведення даних з апострофом (')
-        echo "<br><br>"; 
-        echo "Jone's invoice";
-        echo "<br>";
-        echo 'Jone\'s invoice';
+        echo "<h4>Виведення даних з апострофом (')</h4>";
+        echo "<p>Апостроф може зіпсувати стрінгу, перервати її.
+        Щоб цього уникнути можна використати подвійні лапки</p>";        
+        echo "Jone's invoice"; //Jone's invoice 
+        echo "<p>Або спец символ '\'</p>";
+        echo 'Jone\'s invoice'; //Jone's invoice 
      ?>
 
-    <h4>Variables</h4>
-    <?php
-    # змінні починаються з _ або літер. НЕ з цифр чи спец. знаків взагалі
-    # слова які заборонені $this
-    $name = "Joe";
-    $_Name = "Joe";
-    $_name = "Joe";
+    <hr>
+    <h1>Variables</h1>
+    <h4>Змінні починаються з '_' або літер. НЕ з цифр чи спец. символів або слів які заборонені "$this".</h4>    
+    
+    <?php    
+    $name = "Joe"; //Joe
+    echo $name . "<br>";
+    $_Name = "Joe"; //Joe
+    echo $_Name . "<br>";
+    $_name = "Joe"; //Joe
+    echo $_name . "<br>";
     // $2name = "Joe" // error
     // $%&name = "Joe" // error
 
-    echo $name;
-    echo "<br>";
-    echo $_Name;
-    echo "<br>";
-    echo $_name;
+    echo "<h4>Виведення змінних</h4>";
 
-    echo "<br><br>";
-    echo 'Hello $name'; // Hello $name
-    echo "<br>";
-    echo "Hello $name"; // Hello Joe
-    echo "<br>";
-    echo "Hello {$name}" // Hello Joe
+    echo 'Hello $name' . "<br>"; // Hello $name
+    echo "Hello $name" . "<br>"; // Hello Joe  
+    echo "Hello {$name}" . "<br>"; // Hello Joe
     ?>
 
 <h4>Призначення змінних за значенням і за посиланням</h4>
-<p>за значенням</p>
+<h4>за значенням</h4>
 <?php
 
     $x = 1;
@@ -66,17 +64,17 @@
     echo "x = ",$x;
     echo "<br>";
     echo "y = ", $y;
-    # змінюємо $x і бачимо як на "y" це не впливає
+
     $x = 32;
 
-    echo "<br><br>","змінюємо x = 32","<br><br>";
+    echo "<br>","змінюємо x = 32","<br>";
     echo "x = ",$x;
     echo "<br>";
     echo "y = ", $y;
     # Оскільки, змінна "y" призначається за значенням то зміна значення "x" не впливає на "y"
 ?>
-<hr>
-<p>за посиланням</p>
+
+<h4>за посиланням</h4>
 <?php
 
     $x = 1;
@@ -84,19 +82,20 @@
     echo "x = ",$x;
     echo "<br>";
     echo "y = ", $y;
-    # змінюємо $x і бачимо як на "y" це не впливає
+    # змінюємо $x і бачимо як на "y" це впливає
     $x = 32;
 
-    echo "<br><br>","змінюємо x = 32","<br><br>";
+    echo "<br>","змінюємо x = 32","<br>";
     echo "x = ",$x;
     echo "<br>";
     echo "y = ", $y;
-    # Оскільки, змінна "y" призначається за посиланням (&) то зміна значення "x" впливає і на "y"
+    echo "<p>Оскільки, змінна 'y' призначається за посиланням (&) то зміна значення 'x' впливає і на 'y'.</p>"
 ?>
-
+<hr>
 <h4>PHP в HTML</h4>
     <p><?php echo "Hello World"?></p>
-    <p><?= "Hello World"?></p>
+    
+    <p>Аналог echo - <?= "Hello World"?></p> 
     # PHP with HTML поє`днання
     <p><?php 
         $f=10;
