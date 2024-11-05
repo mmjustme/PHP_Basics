@@ -12,7 +12,7 @@
         echo "Hello world";
         echo "<br>";
 
-        print "Hello World";    
+        print "Hello World TEST";    
         echo "<br>";
        
         echo print "Hello World"; # Hello World1
